@@ -1,0 +1,17 @@
+# don't ever lint node_modules
+node_modules
+# don't lint build output (make sure it's set to your correct build folder name)
+dist
+# don't lint nyc coverage output
+coverage
+
+.eslintrc.js
+next.config.js
+prettier.config.js
+package.json
+package-lock.json
+tsconfig.json
+README.md
+playwright.config.ts
+playwright-report
+storage
