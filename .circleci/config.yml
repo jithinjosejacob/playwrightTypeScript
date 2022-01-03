@@ -34,7 +34,7 @@ jobs:
           - ./node_modules
     - run:
         name: Install Playwright
-        command: npx playwright install
+        command: `sudo npx playwright install`
     - run:
        name: test
        command: npm run go
