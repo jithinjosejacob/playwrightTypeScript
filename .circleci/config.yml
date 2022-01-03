@@ -17,24 +17,15 @@ jobs:
   build:
     working_directory: ~/playwrighttypescript
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:14.18.2-browsers
     steps:
     - checkout
     - run:
         name: update-npm
-        command: 'sudo npm install -g npm@5'
-    - restore_cache:
-        key: dependency-cache-{{ checksum "package-lock.json" }}
+        command: 'sudo npm install -g npm@6'
     - run:
-        name: install-npm-wee
-        command: npm install
-    - save_cache:
-        key: dependency-cache-{{ checksum "package-lock.json" }}
-        paths:
-          - ./node_modules
-    - run:
-        name: Install Playwright
-        command: sudo npx playwright install
+        name: Install Dependancies
+        command: npm ci
     - run:
        name: test
        command: npm run go
