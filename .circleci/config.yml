@@ -33,5 +33,8 @@ jobs:
         paths:
           - ./node_modules
     - run:
-        name: test
-        command: npm run go
+        name: Install Playwright
+        command: npx playwright install
+    - run:
+       name: test
+       command: npm run go
