@@ -1,0 +1,33 @@
+--- 
+  env:
+    variables:
+      BROWSER: "chrome"
+  phases: 
+
+    build: 
+      commands: 
+        - "echo Build started on `date`"
+        - "echo Compiling the Node.js code"
+        - "npm run test"
+    install: 
+      commands: 
+        - "echo Installing Mocha..."
+        - "npm install -g mocha"
+      runtime-versions: 
+        nodejs: 12
+    post_build: 
+      artifacts: 
+        files: 
+          - src/index.js
+          - src/app.js
+          - package.json
+          - node_modules/**/*
+      commands: 
+        - "echo Build completed on `date`"
+    pre_build: 
+      commands: 
+        - "echo Installing source NPM dependencies..."
+        - "npm install"
+        - apt-get -y update
+        - apt-get -y install google-chrome-stable
+  version: 0.2
