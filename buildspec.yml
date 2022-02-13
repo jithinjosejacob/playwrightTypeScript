@@ -28,5 +28,5 @@
       commands: 
         - "echo Installing source NPM dependencies..."
         - "npm install"
-        -"npx playwright install-deps"
+        - "sudo npx playwright install-deps"
   version: 0.2
