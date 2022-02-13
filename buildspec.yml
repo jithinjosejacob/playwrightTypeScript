@@ -11,13 +11,12 @@
         - "npm run test_ci"
     install: 
       commands: 
-        - "echo Installing Mocha..."
-        - "npx install -g mocha"
+        - "echo Installing Dependancies..."
+        - "npm install"
       runtime-versions: 
         nodejs: 12
     pre_build: 
       commands: 
         - "echo Installing source NPM dependencies..."
-        - "npm install"
         - "sudo npx playwright install-deps"
   version: 0.2
