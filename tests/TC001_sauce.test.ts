@@ -17,8 +17,8 @@ test.describe.parallel('Standard User tests', () => {
       await sauceLoginPage.scrollToPageBottom()
     })
 
-    await test.step('Open New tab', async () => {
-      await sauceLoginPage.openNewTab()
-    })
+    // await test.step('Open New tab', async () => {
+    //   await sauceLoginPage.openNewTab()
+    // })
   })
 })

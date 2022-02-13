@@ -2,7 +2,7 @@
 import { Browser, chromium, FullConfig } from '@playwright/test'
 
 async function globalSetup(config: FullConfig) {
-    const browser = await chromium.launch({ headless: false })
+    const browser = await chromium.launch()
     await saveStorage(browser, 'testchamps@gmail.com', 'test123', 'storage/standard.json')
     await browser.close()
 }

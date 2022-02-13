@@ -29,7 +29,6 @@ const config: PlaywrightTestConfig = {
                 baseURL:'https://www.saucedemo.com/',
                 browserName: 'chromium',
                 channel:'chrome',
-                headless: false,
                 viewport: { width: 1500, height: 730 },
                 ignoreHTTPSErrors: true,
                 acceptDownloads: true,
@@ -37,7 +36,7 @@ const config: PlaywrightTestConfig = {
                 //video: `retain-on-failure`,
                 //trace: `retain-on-failure`,
                 launchOptions: {
-                    slowMo: 500
+                    slowMo: 200
                 }
             },
         },

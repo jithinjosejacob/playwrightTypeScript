@@ -1,22 +1,13 @@
---- 
-  env:
-    variables:
-      BROWSER: "chrome"
+  version: 0.2
   phases: 
-
     build: 
       commands: 
-        - "echo Build started on `date`"
-        - "echo Compiling the Node.js code"
+        - "echo Running Tests on CI"
         - "npm run test_ci"
     install: 
       commands: 
         - "echo Installing Dependancies..."
-        - "npm install"
+        - "npm ci"
       runtime-versions: 
-        nodejs: 12
-    pre_build: 
-      commands: 
-        - "echo Installing source NPM dependencies..."
-        - "sudo npx playwright install-deps"
-  version: 0.2
+        nodejs: 14
+
