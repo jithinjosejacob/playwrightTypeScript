@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint */**",
     "lintfix": "./node_modules/.bin/eslint */** --fix",
-    "test_ci": "npx playwright test tests/ --project=WebKit",
+    "test_ci": "npx playwright test tests/ --project=Chrome",
     "go": "npx playwright test tests/TC001_sauce.test --project=Chrome"
   },
   "repository": {
