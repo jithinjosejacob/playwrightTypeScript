@@ -12,7 +12,7 @@
     install: 
       commands: 
         - "echo Installing Mocha..."
-        - "npx playwright install-deps"
+        - "npx install -g mocha"
       runtime-versions: 
         nodejs: 12
     post_build: 
@@ -28,4 +28,5 @@
       commands: 
         - "echo Installing source NPM dependencies..."
         - "npm install"
+        -"npx playwright install-deps"
   version: 0.2
