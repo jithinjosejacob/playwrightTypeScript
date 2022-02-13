@@ -15,15 +15,6 @@
         - "npx install -g mocha"
       runtime-versions: 
         nodejs: 12
-    post_build: 
-      artifacts: 
-        files: 
-          - src/index.js
-          - src/app.js
-          - package.json
-          - node_modules/**/*
-      commands: 
-        - "echo Build completed on `date`"
     pre_build: 
       commands: 
         - "echo Installing source NPM dependencies..."
