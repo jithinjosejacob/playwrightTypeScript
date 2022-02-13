@@ -8,7 +8,7 @@
       commands: 
         - "echo Build started on `date`"
         - "echo Compiling the Node.js code"
-        - "npm run test"
+        - "npm run test_ci"
     install: 
       commands: 
         - "echo Installing Mocha..."
@@ -28,6 +28,4 @@
       commands: 
         - "echo Installing source NPM dependencies..."
         - "npm install"
-        - apt-get -y update
-        - apt-get -y install google-chrome-stable
   version: 0.2
